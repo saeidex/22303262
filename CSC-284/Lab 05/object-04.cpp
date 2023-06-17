@@ -4,6 +4,7 @@ using namespace std;
 class Room
 {
 private:
+    string p;
     double length;
     double breadth;
     double height;
@@ -14,6 +15,9 @@ public:
         length = len;
         breadth = brth;
         height = hgt;
+    }
+    void setP(string a){
+        p = a;
     }
 
     double calculateArea()
