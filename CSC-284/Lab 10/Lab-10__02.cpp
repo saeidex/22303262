@@ -9,6 +9,7 @@ class Triangle
 protected:
     double base;
     double height;
+    double area;
 
 public:
     Triangle(double a, double b)
@@ -24,6 +25,7 @@ class Circle
 {
 protected:
     double radius;
+    double area;
 public:
     Circle(double a)
     {
@@ -34,46 +36,30 @@ public:
 
 class Frnd
 {
-    double tBase;
-    double tHeight;
-    double cRadius;
 public:
-    friend class Triangle;
-    friend class Circle;
 
-    Frnd(Triangle a, Circle b)
+    void printTriangleArea(Triangle &a)
     {
-        tBase = a.base;
-        tHeight = a.height;
-        cRadius = b.radius;
+        a.area = 0.5 * a.base * a.height;
+        cout << "Triangle Area: " << a.area << endl;
     }
-    void printTriangleArea()
+    void printCircleArea(Circle &b)
     {
-        double tArea;
-        tArea = 0.5 * tBase * tHeight;
-
-        cout << "Triangle Area: " << tArea << endl;
-    }
-    void printCircleArea()
-    {
-        double cArea;
-        cArea = PI * cRadius * cRadius;
-
-        cout << "Circle Area: " << cArea << endl;
+        b.area = PI * b.radius * b.radius;
+        cout << "Circle Area: " << b.area << endl;
     }
 
 };
-
 
 
 int main(void)
 {
     Triangle m(5, 10);
     Circle c(5);
-    Frnd f(m, c);
+    Frnd f;
 
-    f.printTriangleArea();
-    f.printCircleArea();
+    f.printTriangleArea(m);
+    f.printCircleArea(c);
 
     return 0;
 }
