@@ -3,7 +3,7 @@
 ## admin.txt
 
 **USE:**
-    Change the file extension into `*.bat` and drag and drop `*.exe` into it
+    Rename the file into `*.bat` and drag and drop `*.exe` into it
 
 
 **Credit:** @Rasel 
