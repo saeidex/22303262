@@ -1,9 +1,9 @@
 # Tools
 
-## admin.txt
+## admin.bat
 
 **USE:**
-    Rename the file into `*.bat` and drag and drop `*.exe` into it
+    Drag and drop `*.exe` into it
 
 
 **Credit:** @Rasel 
