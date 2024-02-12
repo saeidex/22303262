@@ -1,0 +1,152 @@
+:root {
+  --background: #ffffff;
+  --text: #333333;
+  --primary: #333333;
+  --secondary: #666666;
+  --accent: #333333;
+  --border: #cccccc;
+
+  --font-primary: virgil;
+}
+* {
+  /* reset default behavior */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: virgil;
+  src: url(fonts/Virgil.woff2);
+}
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primary);
+}
+
+.p-2rem {
+  padding: 0 2rem;
+}
+/* ********************* main layout ********************* */
+.main-layout {
+  display: grid;
+  grid-template-columns: 2rem 20rem 1fr 2rem;
+}
+
+/* ********************* Start > header ********************* */
+header {
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.main-logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+header .nav,
+header .nav ul {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  place-items: center;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+header .nav ul li {
+  list-style: none;
+}
+
+header .nav ul li a {
+  text-decoration: none;
+  color: var(--copy);
+}
+
+.search {
+  border: none;
+  border-radius: 1rem;
+  padding-left: 1rem;
+  background: var(--foreground);
+  color: var(--copy);
+  border: 1px solid var(--border);
+}
+
+.search:focus,
+.search:active {
+  outline: none;
+}
+/* ********************* End > header ********************* */
+/* ********************* Start > sidebar ********************* */
+.sidebar {
+  color: var(--copy);
+  background: var(--background);
+  /* width: fit-content; */
+  border-right: 1px solid var(--border);
+  height: 100dvh;
+  /* position: fixed; */
+  overflow-y: scroll;
+}
+
+.sidebar-title {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.sidebar-item {
+  /* border: 1px dashed var(--border); */
+  padding: 0 2rem 0 1rem;
+}
+
+.sidebar-item h3 {
+  font-size: 1rem;
+  /* font-weight: 500; */
+  padding: 1rem 0;
+}
+/* 
+.sidebar-item ul {
+  display: grid;
+  gap: 1rem;
+} */
+
+.sidebar-item ul li {
+  list-style: none;
+  margin-left: 1rem;
+  height: 3rem;
+  width: 12rem;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  border: 1px solid var(--copy);
+  border-style: dashed;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.sidebar-item ul li:hover {
+  background: var(--primary);
+  color: var(--primary-content);
+  border: 0.5px solid var(--primary-content);
+  transition-duration: 100ms;
+}
+
+/* ********************* End > sidebar ********************* */
+/* ********************* Start > main ********************* */
+
+/* ********************* End > main ********************* */
+/* ********************* Start > footer ********************* */
+
+/* ********************* End > footer ********************* */
