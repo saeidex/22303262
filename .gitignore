@@ -2,3 +2,4 @@
 *.o
 CSC_284/*.exe
 CSC_284/*.o
+.DS_Store
